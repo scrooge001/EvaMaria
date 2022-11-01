@@ -38,9 +38,9 @@ jobs:
        - name: Restarting Anurag ServeƦ
          continue-on-error: true
          run: |
-              git clone https://github.com/${GITHUB_REPOSITORY} loop
+              git clone https://github.com/${GIT_REPO} loop
               cd loop || exit 1
               echo $(date -u +%T%P) >> Anurag.txt
               git add Anurag.txt
               git commit -m "Anurag ServeƦ : Loop $(date -u +%D-%T%P)"
-              git push -q https://${{ secrets.SUPER_TOKEN }}@github.com/${GITHUB_REPOSITORY} HEAD:AnuragServeƦ
+              git push -q https://${{ secrets.SUPER_TOKEN }}@github.com/${GIT_REPO} HEAD:AnuragServeƦ
