@@ -39,7 +39,7 @@ class evamaria(Client):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('APP_ID', '6766195'))
 API_HASH = environ.get('API_HASH','95900e1df408a32d044c1939a2ba4fd9')
-BOT_TOKEN = environ.get('BOT_TOKEN','5771178761:AAHw5V6XHT2Q58yh2kO_JQz6mU0PzckaQvU')
+BOT_TOKEN = environ.get('BOT_TOKEN','5736688996:AAEQYfmRkmkvYNBimlcL40scz8EUFJhylTE')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -48,7 +48,7 @@ PICS = (environ.get('PICS' ,'https://telegra.ph/file/8619a6f258621134b7576.jpg')
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS','6766195').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001562711904').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '6766195').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
